@@ -2,7 +2,8 @@ Working with "aws_lts"  as a virtual machine in KVM for Linux.
 ==============================================================
 
 Note: The instructions  below are applicalble for LINUX (I have tried on CENTOS 7.5).
-For better understanding please find the PDF in this repo.[ttps://github.com/carnisrk/aws_lts_kvm_conf_on_kvm/blob/master/How_to%20deploy_awslts_in_kvm.pdf]
+For better understanding please find the PDF in this repo.
+[https://github.com/carnisrk/aws_lts_kvm_conf_on_kvm/blob/master/How_to%20deploy_awslts_in_kvm.pdf]
 
 Step1: Download the qcow2 image from aws linux.
 wget -c https://cdn.amazonlinux.com/os-images/2.0.20180622.1/kvm/amzn2-kvm-2.0.20180622.1-x86_64.xfs.gpt.qcow2
@@ -29,3 +30,4 @@ Hope this helps.
 
 References:
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/amazon-linux-2-virtual-machine.html
+
