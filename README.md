@@ -5,42 +5,10 @@
 Step1: Download the qcow2 image from aws linux.
 wget -c https://cdn.amazonlinux.com/os-images/2.0.20180622.1/kvm/amzn2-kvm-2.0.20180622.1-x86_64.xfs.gpt.qcow2
 
-#Step2: create and save file by name user-data
-
-#user-data
-
-#cloud-config
-#vim:syntax=yaml
-users:
-#A user by the name ec2-user is created in the image by default.
-  - default
-#Following entry create user1 and assigns password specified in plain text.
-#Please not use of plain text password is not recommended from security best
-#practises standpoint
-  - name: user1
-    groups: sudo
-    sudo: ['ALL=(ALL) NOPASSWD:ALL']
-    plain_text_passwd: <password>
-    lock_passwd: false
-#Following entry creates user2 and attaches a hashed passwd to the user. Hashed
-#passwords can be generated with:
-#python -c 'import crypt,getpass; print crypt.crypt(getpass.getpass())'
-#  - name: user2
-#    passwd: < hashed password here >
-#    lock_passwd: false
-#Following entry creates user3, disables password based login and enables an SSH public key
-#  - name: user3
-#    ssh-authorized-keys:
-#            - < ssh public key here >
-#    lock_passwd: true
-
-chpasswd:
-  list: |
-    ec2-user:password
+Step2: create and save file by name user-data
 
 Step3: create and save file by name user-data
- #meta-data
- local-hostname: lotus.local
+ 
  
 Step4: For creating startup iso, you will need the following command.
        Please make sure you have user-data and meta-data file in same folder to generate the iso.
