@@ -22,13 +22,13 @@ users:
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
     plain_text_passwd: <password>
     lock_passwd: false
-# Following entry creates user2 and attaches a hashed passwd to the user. Hashed
-# passwords can be generated with:
-# python -c 'import crypt,getpass; print crypt.crypt(getpass.getpass())'
+#Following entry creates user2 and attaches a hashed passwd to the user. Hashed
+#passwords can be generated with:
+#python -c 'import crypt,getpass; print crypt.crypt(getpass.getpass())'
 #  - name: user2
 #    passwd: < hashed password here >
 #    lock_passwd: false
-# Following entry creates user3, disables password based login and enables an SSH public key
+#Following entry creates user3, disables password based login and enables an SSH public key
 #  - name: user3
 #    ssh-authorized-keys:
 #            - < ssh public key here >
