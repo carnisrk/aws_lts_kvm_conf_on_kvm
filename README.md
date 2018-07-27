@@ -10,13 +10,13 @@ wget -c https://cdn.amazonlinux.com/os-images/2.0.20180622.1/kvm/amzn2-kvm-2.0.2
 #user-data
 
 #cloud-config
-# vim:syntax=yaml
+#vim:syntax=yaml
 users:
-# A user by the name ec2-user is created in the image by default.
+#A user by the name ec2-user is created in the image by default.
   - default
-# Following entry create user1 and assigns password specified in plain text.
-# Please not use of plain text password is not recommended from security best
-# practises standpoint
+#Following entry create user1 and assigns password specified in plain text.
+#Please not use of plain text password is not recommended from security best
+#practises standpoint
   - name: user1
     groups: sudo
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
